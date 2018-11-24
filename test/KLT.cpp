@@ -40,18 +40,28 @@ int main( int argc, char** argv )
     bool grid[10][10];
     //480 , 640
     //kp.x kp.y													// Todo: grid
-    //(int)480/kp.x 
+    //(int)480/kp.x
+    
+    int x = 0;
+    int y = 0; 
     for ( auto kp:kps )
-        keypoints.push_back( kp.pt );
+    	x = (kp.x/480)*10;
+    	y = (kp.y/640)*10;
+    	if(grid[x][y] != true)
+            grid[x][y] = true;
+            keypoints.push_back( kp.pt );
 
     vector<cv::Point2f> next_keypoints;
+
+    vector<cv::Point2f> next_keypoints2;
     vector<cv::Point2f> prev_keypoints;
     for ( auto kp:keypoints )
         prev_keypoints.push_back(kp);
     vector<unsigned char> status;
     vector<float> error;
     chrono::steady_clock::time_point t1 = chrono::steady_clock::now();
-    cv::calcOpticalFlowPyrLK( img_1, img_2, prev_keypoints, next_keypoints, status, error ); //Todo: forward
+    cv::calcOpticalFlowPyrLK( img_1, img_2, prev_keypoints, next_keypoints, status, error );
+    cv::calcOpticalFlowPyrLK( img_1, img_2, next_keypoints,next_keypoints2 , status, error ); //Todo: forward
     chrono::steady_clock::time_point t2 = chrono::steady_clock::now();
     chrono::duration<double> time_used = chrono::duration_cast<chrono::duration<double>>( t2-t1 );
     cout<<"LK Flow use time："<<time_used.count()<<" seconds."<<endl;
