@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/vbatvia/simple_visual_odometry/test/featuredetector.cpp" "/home/vbatvia/simple_visual_odometry/build/CMakeFiles/featuredetector.dir/test/featuredetector.cpp.o"
+  "/home/vbatvia/simple_visual_odometry-master/test/featuredetector.cpp" "/home/vbatvia/simple_visual_odometry-master/build/CMakeFiles/featuredetector.dir/test/featuredetector.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

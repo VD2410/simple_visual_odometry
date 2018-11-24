@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/vbatvia/simple_visual_odometry/test/featuredetector.cpp
+/home/vbatvia/simple_visual_odometry-master/test/featuredetector.cpp
 iostream
 -
 opencv2/core/core.hpp

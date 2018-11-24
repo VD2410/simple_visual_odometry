@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/vbatvia/simple_visual_odometry/test/KLT.cpp
+/home/vbatvia/simple_visual_odometry-master/test/KLT.cpp
 iostream
 -
 fstream
